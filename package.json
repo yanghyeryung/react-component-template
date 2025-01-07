@@ -1,6 +1,7 @@
 {
   "name": "react-component-template",
   "displayName": "ReactComponentTemplate",
+  "publisher": "yanghyeryung",
   "description": "",
   "version": "0.0.1",
   "engines": {
