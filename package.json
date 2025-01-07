@@ -1,0 +1,59 @@
+{
+  "name": "react-component-template",
+  "displayName": "ReactComponentTemplate",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "react-component-template.new-react-component-template-js",
+        "title": "New React Component Template (Javascript)"
+      },
+      {
+        "command": "react-component-template.new-react-component-template-ts",
+        "title": "New React Component Template (Typescript)"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "react-component-template.new-react-component-template-js",
+          "group": "navigation",
+          "when": "explorerResourceIsFolder"
+        },
+        {
+          "command": "react-component-template.new-react-component-template-ts",
+          "group": "navigation",
+          "when": "explorerResourceIsFolder"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.96.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "eslint": "^9.16.0",
+    "typescript": "^5.7.2",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
